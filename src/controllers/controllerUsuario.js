@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 
 
 function generateToken(user, res){
-    jwt.sign({user}, process.env.TOKEN_SECRET, {expiresIn: "1m"}, (err, token) => {
+    jwt.sign({user}, process.env.TOKEN_SECRET, {expiresIn: "10m"}, (err, token) => {
         if(err){
             console.log(err);
         }

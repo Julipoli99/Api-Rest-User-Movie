@@ -23,8 +23,15 @@ let controllerPersonaje = {
             include: [{association: "peliculas"}],
             attributes: ["Nombre", "Imagen", "Edad", "Peso", "Historia"]
            })
+
+           if(datos == null){
+            res.status(404).json({Message: "Not found"});
+           }
+           else{
+            res.status(200).json({data: datos});
+           }
     
-           res.json({data: datos})
+           
        } catch (error) {
         return res.status(500).json({message: error.message})
        }
