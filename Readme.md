@@ -13,7 +13,7 @@ https://rest-api-alkemy.herokuapp.com/v1/api/           RUTA DE HEROKU
 
 https://localhost:3000/v1/api/          RUTA LOCAL
 
-*** Usuario ***
+### Usuario ###
 https://localhost:3000/v1/api/register      (POST)
 Los campos a completar para el registro son Nombre, Apellido y Email
 
@@ -24,7 +24,7 @@ Si todo sale bien se le entregará un token que tiene una duracion de 10 minutos
 ***Para ingresar el token se debe ir a la seccion de "headers" en Key escribir Authorization y en value escribir "Bearer" seguido del token otorgado.***
 
 
-*** Personajes ***
+### Personajes ###
 https://localhost:3000/v1/api/characters     (GET)
 Muestra todos los personajes que estan almacenados en la base de datos, si no hay ninguno devolvera un 404 diciendo que no se encuentran personajes almacenados, para crearlos se debe ingresar a la ruta de creacion.
 
@@ -64,7 +64,7 @@ https://localhost:3000/v1/api/characters/:id/delete    (DELETE)
 Elimina al personaje por id
 
 
-*** Peliculas ***
+### Peliculas ###
 https://localhost:3000/v1/api/movies        (GET)
 Muestra todos las peliculas que estan almacenados en la base de datos, si no hay ninguno devolvera un 404 diciendo que no se encuentran peliculas almacenadas, para crearlos se debe ingresar a la ruta de creacion.
 
@@ -101,4 +101,4 @@ https://localhost:3000/v1/api/movies/:id/remove     (DELETE)
 Elimina la pelicula por id
 
 
-### EN LAS RUTAS ACLARADAS ANTERIORMENTE MENOS EN LAS DE USUARIO, SE DEBE PASAR EL TOKEN GENERADO EN LA RUTA DE LOGIN, SE HACE EN CADA CONSULTA INGRESANDO EN HEADERS, KEY = Authorization, VALUE = Bearer + token.
+*** EN LAS RUTAS ACLARADAS ANTERIORMENTE MENOS EN LAS DE USUARIO, SE DEBE PASAR EL TOKEN GENERADO EN LA RUTA DE LOGIN, SE HACE EN CADA CONSULTA INGRESANDO EN HEADERS, KEY = Authorization, VALUE = Bearer + token. ***
