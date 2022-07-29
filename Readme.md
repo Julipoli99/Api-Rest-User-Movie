@@ -6,6 +6,8 @@ No cuenta con Frontend por lo que es necesario utilizarlo con un Rest Client com
 ### BASE DE DATOS ###
 Tiene una base de datos almacenada en la nube con su servidor de AlwaysData.com
 
+Si es de manera local, se debe ingresar en la tabla "personaje_pelicula" que almacenará la informacion de las relaciones entre Personaje y Pelicula.
+
 ###     ENDPOINTS      ###
 
 https://rest-api-alkemy.herokuapp.com/v1/api/           RUTA DE HEROKU
