@@ -60,14 +60,8 @@ let controllerUsuario = {
                 Email
             }
 
-            if(!Nombre || !Apellido || !Email){
-                res.status(400).json({Message: "Bad request, you must complete all the fields"})
-            }
-            else{
-                //generateToken(newUser, res);
-                const user = await db.Usuario.create(newUser); 
-                res.status(201).json(user);
-            }
+            const user = await db.Usuario.create(newUser); 
+            res.status(201).json(user);
 
         } catch (error) {
             return res.status(500).json({Message: error.message});

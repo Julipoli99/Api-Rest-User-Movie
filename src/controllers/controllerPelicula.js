@@ -50,14 +50,9 @@ let controllerPelicula = {
                 id_genero
             }
 
-            if(!Titulo || !Imagen || !FechaCreacion || !Calificacion || !id_genero){
-                res.status(400).json({Message: "Bad request, you must complete all the fields"})
-            }
-            else{
-                await db.Pelicula.create(newMovie);
-                res.status(201).json(newMovie);
-            }
-
+            await db.Pelicula.create(newMovie);
+            res.status(201).json(newMovie);
+    
         } catch (error) {
             return res.status(500).json({message: error.message})
         }

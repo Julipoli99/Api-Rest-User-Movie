@@ -7,11 +7,12 @@ const op = Sequelize.Op;
 
 const controllerPersonaje = require("../controllers/controllerPelicula");
 const queryParamsMiddleware = require("../middlewares/queryParamsPelicula");
+const validation = require("../middlewares/validationMiddleware");
 
 router.get("/", queryParamsMiddleware, controllerPersonaje.movies);
 router.get("/:id", controllerPersonaje.movie);
 
-router.post("/new", controllerPersonaje.newMovie);
+router.post("/new", validation.movie, controllerPersonaje.newMovie);
 router.put("/:id/update", controllerPersonaje.updateMovie);
 router.delete("/:id/remove", controllerPersonaje.remove);
 

@@ -7,6 +7,7 @@ const op = Sequelize.Op;
 
 const controllerPersonaje = require("../controllers/controllerPersonaje");
 const queryParamsMiddleware = require("../middlewares/queryParams");
+const validationCharacter = require("../middlewares/validationMiddleware");
 
 
 
@@ -21,7 +22,7 @@ router.get("/", queryParamsMiddleware, controllerPersonaje.characters);  /*MUEST
 router.get("/:id", controllerPersonaje.character);
 
 
-router.post("/add", controllerPersonaje.newCharacter);
+router.post("/add", validationCharacter.character, controllerPersonaje.newCharacter);
 router.put("/:id/update", controllerPersonaje.updateCharacter);
 router.delete("/:id/delete", controllerPersonaje.deleteCharacter);
 
